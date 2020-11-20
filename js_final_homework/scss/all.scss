@@ -1,0 +1,242 @@
+@import "reset";
+
+
+
+// including: background-color color box-shadow's color
+.bg-white-F5F5F5 {
+    background-color: #F5F5F5;
+}
+
+.bg-white-fff {
+    background-color: #fff;
+}
+
+.bg-gray-424242 {
+    background-color: #424242;
+}
+
+
+.text-gray-424242 {
+    color: #424242;
+}
+
+.text-gray-4A4A4A {
+    color: #4A4A4A;
+}
+
+.bg-yellow-FFD366 {
+    background-color: #FFD366;
+}
+
+.text-yellow-FFD366 {
+    color: #FFD366;
+}
+
+.text-white-FFFFFF-50 {
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.text-gray-4A4A4A {
+    color: #4A4A4A;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.bg-color .mr-53 {
+    margin-right: 53px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.m-0-a {
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 727px;
+    @extend .m-0-a;
+}
+
+.container-sm {
+    max-width: 624px;
+    @extend .m-0-a;
+
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-dir-column {
+    flex-direction: column;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.header {
+    padding: 54px 0;
+}
+
+.general-form {
+    @extend .flex;
+    @extend .justify-content-between;
+    @extend .align-items-center;
+
+
+
+    &-label {
+        @extend .text-yellow-FFD366;
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+
+    &-input {
+        @extend .bg-gray-424242;
+        @extend .text-white-FFFFFF-50;
+        @extend .text-bold;
+        font-size: 24px;
+        padding: 8px 0 8px 16px;
+        margin-bottom: 23px;
+        border: 2px solid #FFD366;
+        border-radius: 10px;
+
+        &:hover {
+            caret-color: #FFD366;
+        }
+
+        &:focus {
+            outline: none;
+            @extend .text-yellow-FFD366;
+
+            &::placeholder {
+                @extend .text-yellow-FFD366;
+            }
+        }
+    }
+
+    &-submit {
+        @extend .bg-yellow-FFD366;
+        @extend .text-bold;
+        border-radius: 50%;
+        font-size: 24px;
+        border: none;
+        width: 120px;
+        height: 120px;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+        }
+
+        &:active {
+            background: #DEA821;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+}
+
+.content {
+    padding: 48px 0 74px 0;
+    @extend .bg-white-F5F5F5;
+
+    &-tittle {
+        @extend .text-gray-424242;
+        @extend .text-bold;
+        font-size: 24px;
+        margin-bottom: 36px;
+
+    }
+}
+
+//_list.scss
+.list {
+
+    @extend .flex;
+    @extend .justify-content-between;
+    @extend .align-items-center;
+    @extend .bg-white-fff;
+
+    margin-bottom: 18px;
+    padding: 21px 12px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+
+    }
+
+    &-tittle {
+        @extend .text-gray-4A4A4A;
+        @extend .text-bold;
+        @extend .h2;
+
+    }
+
+    &-subtitle {
+        @extend .h4;
+        @extend .text-gray-4A4A4A;
+    }
+
+    &-data {
+        @extend .flex;
+        @extend .justify-content-between;
+        @extend .text-gray-4A4A4A;
+        margin-left: 7px;
+        font-size: 20px;
+
+
+    }
+}
+
+@mixin border-left-color($color) {
+    border-left: 7px solid $color;
+}
+
+
+
+.border-left-green {
+    @include border-left-color(#86D73F);
+}
+
+.border-left-blue {
+    @include border-left-color(#31BAF9);
+}
+
+.border-left-orange {
+    @include border-left-color(#FF982D);
+}
+
+
+.border-left-orange-darken {
+    @include border-left-color(#FF6C03);
+}
+
+.border-left-left-red {
+    @include border-left-color(#FF1200);
+}
+
+.footer {
+    padding: 18px 0;
+}

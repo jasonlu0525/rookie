@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measure your BMI !!</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div class="bg-gray-424242">
+        <div class="container">
+            <header class="header">
+                <form action="bmi.html" class="general-form" id="bmi_form">
+                    <h1>
+                        <a href="bmi.html">
+                            <img src="img/BMICLogo.png" alt="bmi圖片" class="form-area-icons">
+                        </a>
+                    </h1>
+
+
+                    <div class="flex flex-dir-column mr-53">
+                        <label for="height" class="general-form-label h3">身高 cm</label>
+                        <input type="text" class="general-form-input" name="centermiter" id="height" autocomplete="off"
+                            placeholder="請輸入身高" required>
+                        <label for="height" class="general-form-label h3">體重 kg</label>
+                        <input type="text" class="general-form-input" name="kilogram" id="weight" autocomplete="off"
+                            placeholder="請輸入體重" required>
+                    </div>
+                    <button type="button" class="general-form-submit" id="result">看結果</button>
+                </form>
+            </header>
+        </div>
+    </div>
+
+
+
+    <main class="content ">
+        <div class="container-sm">
+            <h3 class="content-tittle text-center">BMI 紀錄</h3>
+
+            <ul id="list">
+                <!-- <li class="list border-left-green ">
+                    <h2 class="list-tittle">理想</h2>
+                    <div class="flex align-items-center">
+                        <span class="list-subtitle">BMI</span>
+                        <div class="list-data">20.90</div>
+                    </div>
+                    <div class="flex align-items-center">
+                        <span class="list-subtitle">weight</span>
+                        <div class="list-data">70kg</div>
+                    </div>
+                    <div class="flex align-items-center">
+                        <span class="list-subtitle">height</span>
+                        <div class="list-data">180cm</div>
+                    </div>
+                    <div class="list-subtitle">06-19-2017</div>
+                </li> -->
+            </ul>
+        </div>
+
+    </main>
+    <div class="footer bg-yellow-FFD366">
+        <div class="container flex justify-content-center">
+            <img src="img/btn_goTop_small.png" alt="bmi圖片">
+        </div>
+
+    </div>
+<script src="js/bmi.js"></script>
+
+</body>
+
+</html>
