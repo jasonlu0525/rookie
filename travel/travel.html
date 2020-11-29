@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄旅遊資訊</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <!-- 40  36 24 20 18 16 14 -->
+
+    <header class="banner  flex  align-items-center  ">
+        <div class="container">
+            <h1 class="tittle text-center flex justify-content-between"> <span>高</span>
+                <span>雄</span>旅<span></span>遊<span></span>資<span></span><span>訊</span></h1>
+
+
+            <select class="option" name="area" id="select_area">
+
+                <option value="請選擇行政區" disabled>--請選擇行政區--</option>
+                <option value="前金區">前金區</option>
+                <option value="新興區">新興區</option>
+                <option value="鹽埕區">鹽埕區</option>
+                <option value="左營區">左營區</option>
+                <option value="楠梓區">楠梓區</option>
+                <option value="鼓山區">鼓山區</option>
+                <option value="旗津區">旗津區</option>
+                <option value="苓雅區">苓雅區</option>
+                <option value="三民區">三民區</option>
+                <option value="前鎮區">前鎮區</option>
+                <option value="小港區">小港區</option>
+                <option value="鳳山區">鳳山區</option>
+                <option value="鳥松區">鳥松區</option>
+                <option value="大社區">大社區</option>
+                <option value="仁武區">仁武區</option>
+                <option value="大樹區">大樹區</option>
+                <option value="岡山區">岡山區</option>
+                <option value="燕巢區">燕巢區</option>
+                <option value="梓官區">梓官區</option>
+                <option value="永安區">永安區</option>
+                <option value="彌陀區">彌陀區</option>
+                <option value="橋頭區">橋頭區</option>
+                <option value="田寮區">田寮區</option>
+                <option value="茄萣區">茄萣區</option>
+                <option value="阿蓮區">阿蓮區</option>
+                <option value="路竹區">路竹區</option>
+                <option value="湖內區">湖內區</option>
+                <option value="那瑪夏區">那瑪夏區</option>
+                <option value="桃源區">桃源區</option>
+                <option value="茂林區">茂林區</option>
+                <option value="六龜區">六龜區</option>
+                <option value="美濃區">美濃區</option>
+                <option value="旗山區">旗山區</option>
+                <option value="甲仙區">甲仙區</option>
+                <option value="內門區">內門區</option>
+                <option value="杉林區">杉林區</option>
+                <option value="林園區">林園區</option>
+                <option value="大寮區">大寮區</option>
+            </select>
+        </div>
+        
+    </header>
+
+    <div class="bg-gray">
+        <div class="main container flex flex-dir-column ">
+
+
+            <section class=" popular posion-sticky">
+                <h5 class="tittle">熱門行政區</h5>
+                <div class="flex justify-content-between">
+                    <button class="area-btn text-20 bg-purple">苓雅區</button>
+                    <button class="area-btn text-20 bg-pink">三民區</button>
+                    <button class="area-btn text-20 bg-yellow">新興區</button>
+                    <button class="area-btn text-20 bg-blue">鹽埕區</button>
+
+                </div>
+
+            </section>
+            <img src="image/icons_down.png" alt="裝飾用icon" class="down-icon align-self-center">
+            <h2 class="text-center text-bold" id="Zone-tittle"></h2>
+            <ul id="list" class="card flex justify-content-between flex-wrap"></ul>
+            <div id="pagination" class="text-center">
+                <!-- <small>
+                    &lt; prev</small> <a target="_self" rel="noopener noreferrer">1</a>
+                <a target="_self" rel="noopener noreferrer">2</a>
+                <a target="_self" rel="noopener noreferrer">3</a>
+                <a target="_self" rel="noopener noreferrer">4</a>
+                <a target="_self" rel="noopener noreferrer">5</a>
+                <small>next &gt;</small> -->
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer bg-blue">
+        <div class="container text-center ">
+            <small class="text-white  ">高雄旅遊網
+                <a href="https://www.kcg.gov.tw/Default.aspx"
+                    class="d-block text-yellow-secondary footer-link">資料來源：高雄市政府 </a>
+            </small></div>
+
+
+    </footer>
+
+    <script src="js/all.js"></script>
+
+
+
+</body>
+
+</html>
