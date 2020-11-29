@@ -1,0 +1,62 @@
+@import "reset";
+@import "mixin/border._color";
+@import "mixin/width";
+@import "utility/background";
+@import "utility/text";
+@import "utility/layout";
+@import "utility/box_shadow";
+@import "utility/boxmodel";
+@import "utility/position";
+@import "utility/width";
+@import "component/form";
+@import "component/list";
+// including: background-color color box-shadow's color
+
+.container {
+    max-width: 727px;
+    @extend .m-0-a;
+}
+
+.container-sm {
+    max-width: 624px;
+    @extend .m-0-a;
+
+}
+
+.header {
+    padding: 54px 0;
+}
+
+.content {
+    padding: 48px 0 74px 0;
+    @extend .bg-white-F5F5F5;
+
+    &-tittle {
+        @extend .text-gray-424242;
+        @extend .text-bold;
+        font-size: 24px;
+        margin-bottom: 36px;
+    }
+}
+
+.reset {
+    top: 70%;
+    left: 75%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: rotate(135deg);
+        transition: all 200ms;
+
+    }
+}
+.clear_all{
+    padding: 20px;
+}
+.footer {
+    padding: 18px 0;
+}

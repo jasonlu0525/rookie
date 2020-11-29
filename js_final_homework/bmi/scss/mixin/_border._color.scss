@@ -1,0 +1,11 @@
+@mixin border-left-color($width, $color) {
+    border-left: $width solid $color;
+}
+
+@mixin border-color($width, $color) {
+    border: $width solid $color;
+}
+
+@mixin box-shadow($RGB) {
+    box-shadow: 2px 0 3px 0 $RGB;
+}

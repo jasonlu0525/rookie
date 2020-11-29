@@ -1,0 +1,76 @@
+.general-form {
+    @extend .flex;
+    @extend .align-items-center;
+
+
+
+
+    &-label {
+        @extend .text-yellow-FFD366;
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+
+    &-input {
+        @extend .bg-gray-424242;
+        @extend .text-white-FFFFFF-50;
+        @extend .text-bold;
+        font-size: 24px;
+        width: 250px;
+        padding: 4px 0 4px 16px;
+        margin-bottom: 23px;
+        border: 2px solid #FFD366;
+        border-radius: 10px;
+
+        &:hover {
+            caret-color: #FFD366;
+        }
+
+        &:focus {
+            outline: none;
+            @extend .text-yellow-FFD366;
+
+            &::placeholder {
+                @extend .text-yellow-FFD366;
+            }
+        }
+    }
+
+    &-submit {
+        @extend .bg-yellow-FFD366;
+        @extend .text-bold;
+        border-radius: 50%;
+        font-size: 24px;
+        border: none;
+        width: 120px;
+        height: 120px;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+        }
+
+        &:active {
+            background: #DEA821;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-reset {
+        @extend .flex;
+        @extend .justify-content-center;
+        @extend .align-items-center;
+        @extend .bg-transparent;
+        @extend .text-bold;
+        @extend .text-center;
+        border-radius: 50%;
+        font-size: 24px;
+        width: 123px;
+        height: 123px;
+
+
+    }
+}

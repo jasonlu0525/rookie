@@ -1,0 +1,71 @@
+.m-0-a {
+    margin: 0 auto;
+}
+
+.border-left-green {
+    @include border-left-color(7px, #86D73F);
+
+}
+
+.border-left-blue {
+    @include border-left-color(7px, #31BAF9);
+
+}
+
+.border-left-orange {
+    @include border-left-color(7px, #FF982D);
+}
+
+
+.border-left-orange-darken {
+    @include border-left-color(7px, #FF6C03);
+
+}
+
+.border-left-red {
+    @include border-left-color(7px, #FF1200);
+
+}
+
+///
+
+.border-gray {
+    @include border-color(3px, #424242);
+}
+
+.border-green {
+    @include border-color(6px, #86D73F);
+
+}
+
+.border-blue {
+    @include border-color(6px, #31BAF9);
+
+}
+
+.border-orange {
+    @include border-color(6px, #FF982D);
+}
+
+
+.border-orange-darken {
+    @include border-color(6px, #FF6C03);
+
+}
+
+.border-red {
+    @include border-color(6px, #FF1200);
+
+}
+
+.mr-53 {
+    margin-right: 53px;
+}
+
+.mr-97 {
+    margin-right: 97px;
+}
+
+.ml-18 {
+    margin-left: 18px;
+}

@@ -1,0 +1,6 @@
+@mixin  max-width($value) {
+    max-width:$value ;
+}
+@mixin min-width($value) {
+    min-width:$value ;
+}
