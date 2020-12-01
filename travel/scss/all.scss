@@ -1,5 +1,6 @@
-@import "reset";
 @import "variable";
+@import "mixin/mediaquery";
+@import "reset";
 @import "color";
 @import "text";
 @import "position";
@@ -17,6 +18,10 @@
     max-width: 1024px;
     padding: 0 40px;
     margin: 0 auto;
+
+    @include phone-576 {
+        padding: 0 24px;
+    }
 }
 
 .banner {
@@ -27,17 +32,22 @@
     background-position: center;
     height: 100vh;
 
+    @include phone-576 {
+        padding: 0 24px;
+    }
+
     .tittle {
+        letter-spacing: 4.2px;
         margin-bottom: 96px;
         color: $white;
-        letter-spacing: 15px;
     }
 }
 
 .option {
-    padding: 18px 0 18px 9.5px;
+    padding: 11px 0 11px 9.5px;
     background-color: rgba(255, 255, 255, 0.70);
     width: 452px;
+    max-width: 100%;
     border: 3px solid $white;
     border-radius: 3px;
     outline: none;
@@ -45,7 +55,11 @@
     cursor: pointer;
     background-image: url(../image/icons_down.png);
     background-repeat: no-repeat;
-    background-position: 419px 20px;
+    background-position: 419px 50%;
+
+    @include phone-576 {
+        text-align: center;
+    }
 }
 
 .down-icon {
@@ -66,6 +80,12 @@
         left: 0;
         z-index: 999;
 
+        @include phone-425 {
+            width: 100%;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
         .tittle {
             margin: 0 0 14px 0;
         }
@@ -73,7 +93,7 @@
 
     .area-btn {
         flex: 0 1 24%;
-        padding: 5.5px 33px;
+        padding: 5.5px 0;
 
         border-radius: 5px;
         cursor: pointer;
@@ -86,6 +106,15 @@
         &:hover {
             box-shadow: 0 0 3px 3px #000000;
         }
+
+        @include phone-576 {
+
+            font-size: 18px;
+            padding: 10px 0;
+        }
+
+
+
     }
 }
 
@@ -134,12 +163,40 @@
     align-items: center;
 }
 
+.align-items-baseline {
+    align-items: baseline;
+}
+
 .align-items-end {
     align-items: flex-end;
 }
 
 .align-self-center {
     align-self: center;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-basis-50 {
+    flex-basis: 50%;
+}
+
+.flex-basis-100 {
+    flex-basis: 100%;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
 }
 
 .ml-12 {
@@ -155,13 +212,48 @@
     margin-bottom: 1rem;
 }
 
+.zone-tittle {
+    margin-bottom: 24px;
+}
+
+.dotted-border {
+    margin-bottom: -12px;
+    width: 100%;
+    height: 0px;
+    border-top: 1px dashed $blue;
+}
+
+.circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid $blue;
+    padding: 6px 0;
+    margin: 0 auto 65px;
+
+}
+
+.down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 11px solid $blue;
+    margin: 0 auto;
+}
+
 .card {
 
 
     &-items {
         //li
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
         margin: 0 0 36px 0;
         flex-basis: 49.1525%;
+
+        @include phone-576 {
+            flex-basis: 100%;
+        }
     }
 
     &-picture {
@@ -176,6 +268,22 @@
             left: 0;
             margin: 0 19px 0 22px;
             @extend .text-white;
+
+            @include phone-576 {
+                margin: 0 10px 0 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h3 {
+                    font-size: 20px;
+                    word-wrap: break-word;
+                }
+
+                span {
+                    flex-shrink: 0;
+                }
+            }
         }
     }
 
@@ -183,13 +291,75 @@
         @extend .bg-white;
         z-index: 3;
         padding: 15px 24px 20px;
+
+        @include phone-576 {
+            font-size: 14px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 
-    .text-oneLine { //多行文字溢出隱藏
+    .text-oneLine {
+        //多行文字溢出隱藏
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         white-space: normal;
         overflow: hidden;
+        transition: ease-in 1s;
     }
+}
+
+
+.go-top {
+    position: fixed;
+    bottom: 195px;
+    right: 0%;
+    cursor: pointer;
+}
+
+.pagation {
+    margin-bottom: 41px;
+}
+
+.page-num {
+    margin: 0px 8px;
+    padding: 4px 8px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+        outline: 3px solid $blue;
+    }
+
+    &:active {
+        background-color: $white;
+    }
+}
+
+.pre-page {
+    margin-right: 26px;
+}
+.next-page {
+    margin-left: 26px;
+}
+.pre-page,
+.next-page {
+    cursor: pointer;
+    @include phone-375 {
+        margin: 0;
+    }
+}
+
+
+
+.go-top {
+    &:active {
+        transition: all 2s;
+    }
+
+}
+
+.d-none {
+    display: none;
 }

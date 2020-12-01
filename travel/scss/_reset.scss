@@ -132,35 +132,49 @@ table {
 * {
     box-sizing: border-box;
 }
-h1,h2,h3,h4,h4,small{
+
+h1,
+h2,
+h3,
+h4,
+h4,
+small {
     font-weight: bold;
 }
-h1 {
-    font-size: 60px;
+
+h1,
+.h1 {
+    font-size: 40px;
 }
 
-h2 {
+h2,
+.h2 {
     font-size: 36px;
 }
 
-h3 {
+h3,
+.h3 {
     font-size: 24px;
 }
 
-h4 {
+h4,
+.h4 {
     font-size: 20px;
 }
 
-h5 {
+h5,
+.h5 {
     font-size: 18px;
 }
 
-small {
+small,
+.small {
     font-size: 14px;
 }
 
 a {
     text-decoration: none;
+    color: $black;
 }
 
 select,
@@ -173,3 +187,8 @@ img {
     max-width: 100%;
     display: block;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+

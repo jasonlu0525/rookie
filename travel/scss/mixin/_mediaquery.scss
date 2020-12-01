@@ -1,0 +1,35 @@
+@mixin phone-375 {
+    @media screen and (max-width:375px) {
+        @content;
+    }
+}
+@mixin phone-425 {
+    @media screen and (max-width:425px) {
+        @content;
+    }
+}
+@mixin phone-576 {
+    @media screen and (max-width:576px) {
+        @content;
+    }
+}
+@mixin pad-768 {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+@mixin pc-992 {
+    @media screen and (max-width:992px) {
+        @content;
+    }
+}
+@mixin pc-1024 {
+    @media screen and (max-width:1024px) {
+        @content;
+    }
+}
+@mixin pc-1200 {
+    @media screen and (max-width:1200px) {
+        @content;
+    }
+}
