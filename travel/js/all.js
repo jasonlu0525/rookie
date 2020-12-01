@@ -5,10 +5,13 @@ let list_zone_tittle = document.querySelector('#Zone-tittle');
 list_zone_tittle.classList.add('text-purple');
 let pagination = document.querySelector('#pagination');
 let information;
+let action;
+let clicked_pagination_num;
+let assign_data_perPage;
 const data_filter = (get_condition) => { //篩選資料、分頁
     let ajax_data = information;
     let filter_data = [];
-    let assign_data_perPage = [];
+    assign_data_perPage = [];
     //過濾資料
     for (let arr_index = 0; arr_index < ajax_data.result.records.length; arr_index++) {
         //    console.log(ajax_data.result.records[arr_index].Zone);
@@ -70,6 +73,7 @@ const data_filter = (get_condition) => { //篩選資料、分頁
     }
     pagination.firstElementChild.classList.add('text-blue');
     let page_num = document.querySelectorAll('.page-num');
+    let clicked_pagination_num;
     console.log(page_num);
     for (let page_num_index = 0; page_num_index < page_num.length; page_num_index++) {
 
@@ -81,17 +85,39 @@ const data_filter = (get_condition) => { //篩選資料、分頁
             // pagination.children[page_num]
             console.log(pagination.children)
 
-            let clicked_pagination_num = e.target.dataset.btn;
+            clicked_pagination_num = e.target.dataset.btn;
             e.target.classList.add('text-blue');
             e.target.style.outline = ' 3px solid black';
+            console.log(clicked_pagination_num);
             create_dom(assign_data_perPage, clicked_pagination_num);
-
         }, false);
 
     }
+    let prev_page = document.querySelector('.pre-page');
+
+    prev_page.addEventListener('click', () => {
+
+        console.log(action);
+
+        // page_num[action].classList.classList.remove('text-blue');
+        // page_num[action].removeAttribute('style');
+        // page_num[action].classList.remove('text-blue');
+        // page_num[action].removeAttribute('style');
+        //  page_num[clicked_pagination_num].classList.remove('text-blue');
+        console.log(page_num);
+      //  console.log(page_num[clicked_pagination_num].previousElementSibling);
+        page_num[clicked_pagination_num || 0].removeAttribute('style');
+        page_num[clicked_pagination_num || 0].previousElementSibling.classList.add('text-blue');
+        page_num[clicked_pagination_num || 0].previousElementSibling.style.outline = ' 3px solid black';
+        //  create_dom(assign_data_perPage, clicked_pagination_num - 1);
+    }, false);
     console.log(filter_data);
     return assign_data_perPage;
 }
+
+
+
+
 const create_dom = (pickout_data, load_page_num_data) => {
     list.textContent = ''; //清空 childNodes
     console.log(pickout_data);
@@ -200,9 +226,20 @@ for (let area_btn_index = 0; area_btn_index < popular_btn.length; area_btn_index
 
 };
 let select_option = document.querySelector('#select_area');
+
 select_option.addEventListener('change', (e) => {
+    e.stopPropagation();
     let option_value = e.target.value;
     console.log(option_value);
     let option_data_filter = data_filter(option_value);
     create_dom(option_data_filter, 1);
+}, false);
+
+
+
+select_option.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    e.target.classList.toggle('test');
+
 }, false);

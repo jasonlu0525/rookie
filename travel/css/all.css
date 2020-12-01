@@ -178,6 +178,18 @@ a {
   color: #000000;
 }
 
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+  display: none;
+}
+
 select,
 button {
   border: none;
@@ -302,25 +314,19 @@ html {
 
 .option {
   padding: 11px 0 11px 9.5px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
   width: 452px;
   max-width: 100%;
-  border: 3px solid #FFFFFF;
   border-radius: 3px;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   cursor: pointer;
   background-image: url(../image/icons_down.png);
   background-repeat: no-repeat;
-  background-position: 419px 50%;
+  background-position: 92.69% 50%;
 }
 
-@media screen and (max-width: 576px) {
-  .option {
-    text-align: center;
-  }
+.test {
+  background-image: url(../image/icons_up.png);
 }
 
 .down-icon {

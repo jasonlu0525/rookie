@@ -45,22 +45,31 @@
 
 .option {
     padding: 11px 0 11px 9.5px;
-    background-color: rgba(255, 255, 255, 0.70);
+    background-color: rgba(255, 255, 255, 0.60);
     width: 452px;
     max-width: 100%;
-    border: 3px solid $white;
     border-radius: 3px;
     outline: none;
-    appearance: none;
     cursor: pointer;
     background-image: url(../image/icons_down.png);
     background-repeat: no-repeat;
-    background-position: 419px 50%;
+    background-position: 92.69% 50%;
 
-    @include phone-576 {
-        text-align: center;
-    }
+    // &:focus {
+    //     outline: 3px solid $purple;
+    //     background-image: url(../image/icons_up.png);
+    // }
+
+
+
+
+
 }
+
+.test {
+    background-image: url(../image/icons_up.png);
+}
+
 
 .down-icon {
     margin-bottom: 65px;
@@ -340,12 +349,15 @@
 .pre-page {
     margin-right: 26px;
 }
+
 .next-page {
     margin-left: 26px;
 }
+
 .pre-page,
 .next-page {
     cursor: pointer;
+
     @include phone-375 {
         margin: 0;
     }
