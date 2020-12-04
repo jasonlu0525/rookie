@@ -54,22 +54,11 @@
     background-image: url(../image/icons_down.png);
     background-repeat: no-repeat;
     background-position: 92.69% 50%;
-
-    // &:focus {
-    //     outline: 3px solid $purple;
-    //     background-image: url(../image/icons_up.png);
-    // }
-
-
-
-
-
 }
 
 .test {
     background-image: url(../image/icons_up.png);
 }
-
 
 .down-icon {
     margin-bottom: 65px;
@@ -252,8 +241,9 @@
 }
 
 .card {
-
-
+    @extend .flex;
+    @extend .flex-wrap;
+    @extend .justify-content-between;
     &-items {
         //li
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);

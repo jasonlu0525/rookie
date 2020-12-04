@@ -196,6 +196,10 @@ button {
   outline: none;
 }
 
+button {
+  background-color: transparent;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -247,6 +251,14 @@ html {
 
 .text-blue {
   color: #559AC8;
+}
+
+.text-gray {
+  color: #F7F7F7;
+}
+
+.text-gray-lighten {
+  color: rgba(74, 74, 74, 0.5);
 }
 
 .position-relative, .card-picture-tittle {
@@ -407,13 +419,13 @@ html {
   text-align: center;
 }
 
-.flex {
+.flex, .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.flex-wrap {
+.flex-wrap, .card {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -424,7 +436,7 @@ html {
           justify-content: center;
 }
 
-.justify-content-between {
+.justify-content-between, .card {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
