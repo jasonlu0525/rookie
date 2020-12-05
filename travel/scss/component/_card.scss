@@ -1,0 +1,73 @@
+.card {
+    @extend .flex;
+    @extend .flex-wrap;
+    @extend .justify-content-between;
+
+    &-items {
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+        margin: 0 0 36px 0;
+        flex-basis: 49.1525%;
+        cursor: pointer;
+transition: ease-in 200ms;
+        @include phone-576 {
+            flex-basis: 100%;
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 1);
+        }
+    }
+
+    &-picture {
+        height: 155px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &-tittle {
+            @extend .position-relative;
+            top: 117px;
+            left: 0;
+            margin: 0 19px 0 22px;
+            @extend .text-white;
+
+            @include phone-576 {
+                margin: 0 10px 0 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h3 {
+                    font-size: 17px;
+                    word-wrap: break-word;
+                }
+
+                span {
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+
+    &-info {
+        @extend .bg-white;
+        z-index: 3;
+        padding: 15px 24px 20px;
+
+        @include phone-576 {
+            font-size: 14px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .text-oneLine {
+        //多行文字溢出隱藏
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        overflow: hidden;
+        transition: ease-in 1s;
+    }
+}

@@ -1,18 +1,15 @@
 @import "variable";
 @import "mixin/mediaquery";
 @import "reset";
-@import "color";
-@import "text";
-@import "position";
-
-
-.text-20 {
-    font-size: 20px;
-}
-
-.text-bold {
-    font-weight: bold;
-}
+@import "utility/color";
+@import "utility/text";
+@import "utility/position";
+@import "utility/display";
+@import "utility/box";
+@import "layout/header";
+@import "layout/footer";
+@import "component/card";
+@import "component/pagation";
 
 .container {
     max-width: 1024px;
@@ -23,52 +20,10 @@
         padding: 0 24px;
     }
 }
-
-.banner {
-    filter: brightness(1.3);
-    background-image: url('../image/Hero.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-
-    @include phone-576 {
-        padding: 0 24px;
-    }
-
-    .tittle {
-        letter-spacing: 4.2px;
-        margin-bottom: 96px;
-        color: $white;
-    }
-}
-
-.option {
-    padding: 11px 0 11px 9.5px;
-    background-color: rgba(255, 255, 255, 0.60);
-    width: 452px;
-    max-width: 100%;
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-    background-image: url(../image/icons_down.png);
-    background-repeat: no-repeat;
-    background-position: 92.69% 50%;
-}
-
-.test {
-    background-image: url(../image/icons_up.png);
-}
-
-.down-icon {
-    margin-bottom: 65px;
-}
-
 .main {
     margin-top: -107px;
 
     .popular {
-
         background: #FFFFFF;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
         border-radius: 5px;
@@ -106,119 +61,19 @@
         }
 
         @include phone-576 {
-
             font-size: 18px;
             padding: 10px 0;
         }
-
-
-
     }
-}
-
-.footer {
-    padding: 24px 0;
-
-    &-link {
-        margin-top: 15px;
-    }
-}
-
-.arrow-top {
-    transform: rotate(180deg);
-}
-
-
-.d-block {
-    display: block;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.flex {
-    display: flex;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
-.justify-content-center {
-    justify-content: center;
-}
-
-.justify-content-between {
-    justify-content: space-between;
-}
-
-.flex-dir-column {
-    flex-direction: column;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.align-items-baseline {
-    align-items: baseline;
-}
-
-.align-items-end {
-    align-items: flex-end;
-}
-
-.align-self-center {
-    align-self: center;
-}
-
-.align-self-center {
-    align-self: center;
-}
-
-.flex-shrink-0 {
-    flex-shrink: 0;
-}
-
-.flex-grow-1 {
-    flex-grow: 1;
-}
-
-.flex-basis-50 {
-    flex-basis: 50%;
-}
-
-.flex-basis-100 {
-    flex-basis: 100%;
-}
-
-.justify-content-end {
-    justify-content: flex-end;
-}
-
-.ml-12 {
-    margin-left: 12px;
-}
-
-.mb-13 {
-    margin-bottom: 13px;
-
-}
-
-.mb-16 {
-    margin-bottom: 1rem;
 }
 
 .zone-tittle {
     margin-bottom: 24px;
 }
 
-.dotted-border {
+.dashed-border {
     margin-bottom: -12px;
-    width: 100%;
-    height: 0px;
-    border-top: 1px dashed $blue;
+    outline: 1px dashed $blue;
 }
 
 .circle {
@@ -228,7 +83,6 @@
     border: 2px solid $blue;
     padding: 6px 0;
     margin: 0 auto 65px;
-
 }
 
 .down-arrow {
@@ -240,128 +94,8 @@
     margin: 0 auto;
 }
 
-.card {
-    @extend .flex;
-    @extend .flex-wrap;
-    @extend .justify-content-between;
-    &-items {
-        //li
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
-        margin: 0 0 36px 0;
-        flex-basis: 49.1525%;
-
-        @include phone-576 {
-            flex-basis: 100%;
-        }
-    }
-
-    &-picture {
-        height: 155px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-        &-tittle {
-            @extend .position-relative;
-            top: 117px;
-            left: 0;
-            margin: 0 19px 0 22px;
-            @extend .text-white;
-
-            @include phone-576 {
-                margin: 0 10px 0 10px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                h3 {
-                    font-size: 20px;
-                    word-wrap: break-word;
-                }
-
-                span {
-                    flex-shrink: 0;
-                }
-            }
-        }
-    }
-
-    &-info {
-        @extend .bg-white;
-        z-index: 3;
-        padding: 15px 24px 20px;
-
-        @include phone-576 {
-            font-size: 14px;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-    }
-
-    .text-oneLine {
-        //多行文字溢出隱藏
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        white-space: normal;
-        overflow: hidden;
-        transition: ease-in 1s;
-    }
-}
-
-
 .go-top {
     position: fixed;
     bottom: 195px;
     right: 0%;
-    cursor: pointer;
-}
-
-.pagation {
-    margin-bottom: 41px;
-}
-
-.page-num {
-    margin: 0px 8px;
-    padding: 4px 8px;
-    background-color: transparent;
-    cursor: pointer;
-
-    &:hover {
-        outline: 3px solid $blue;
-    }
-
-    &:active {
-        background-color: $white;
-    }
-}
-
-.pre-page {
-    margin-right: 26px;
-}
-
-.next-page {
-    margin-left: 26px;
-}
-
-.pre-page,
-.next-page {
-    cursor: pointer;
-
-    @include phone-375 {
-        margin: 0;
-    }
-}
-
-
-
-.go-top {
-    &:active {
-        transition: all 2s;
-    }
-
-}
-
-.d-none {
-    display: none;
 }

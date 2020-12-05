@@ -1,0 +1,29 @@
+.pagation {
+    @extend .flex;
+    @extend .justify-content-center;
+    @extend .align-items-baseline;
+    margin-bottom: 41px;
+
+    @include phone-425 {
+        justify-content: space-between;
+    }
+}
+
+.page-num {
+    margin: 0px 8px;
+    padding: 4px 8px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+        outline: 3px solid $blue;
+    }
+
+    &:active {
+        background-color: $white;
+    }
+
+    @include phone-375 {
+        margin: 0px 4px;
+    }
+}
