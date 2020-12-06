@@ -1,0 +1,58 @@
+.list {
+
+    @extend .flex;
+    @extend .justify-content-between;
+    @extend .align-items-center;
+    @extend .bg-white-fff;
+    margin-bottom: 18px;
+    padding-right: 12px;
+
+    @include phone-425 {
+        //  flex-wrap: wrap;
+    }
+
+    &-condition-color {
+        padding: 31px 0px;
+        margin-right: -21px;
+
+        @include phone-576 {
+            margin-right: 0;
+        }
+    }
+
+    &-tittle {
+        @extend .text-gray-4A4A4A;
+        @extend .text-bold;
+        @extend .h2;
+        min-width: 80px;
+        margin-right: -20px;
+
+        @include phone-425 {
+            font-size: 1rem;
+            font-size: 0.75rem;
+        }
+    }
+
+    &-subtitle {
+        @extend .h4;
+        @extend .text-gray-4A4A4A;
+
+        @include phone-425 {
+            font-size: 0.75rem;
+        }
+    }
+
+    &-data {
+        @extend .flex;
+        @extend .justify-content-between;
+        @extend .text-gray-4A4A4A;
+        @extend .text-bold;
+        margin-left: 7px;
+        font-size: 20px;
+
+        @include phone-425 {
+            font-size: 0.75rem;
+        }
+    }
+
+}

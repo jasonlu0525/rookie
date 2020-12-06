@@ -1,0 +1,26 @@
+
+.box-shadow-green {
+
+    @include box-shadow(rgba(134, 215, 63, 0.29));
+}
+
+.box-shadow-blue {
+
+    @include box-shadow(rgba(49, 186, 249, 0.29));
+}
+
+.box-shadow-orange {
+
+    @include box-shadow(rgba(255, 152, 45, 0.29));
+}
+
+
+.box-shadow-orange-darken {
+
+    @include box-shadow(rgba(255, 108, 3, 0.29));
+}
+
+.box-shadow-red {
+
+    @include box-shadow(rgba(255, 18, 0, 0.29));
+}
