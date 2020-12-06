@@ -144,7 +144,7 @@ form_result_button.addEventListener('click', (e) => {
         let triggr_el = e.target;
 
         let show_condition = document.createElement('p');
-        show_condition.classList.add(`text-${bmi_condition_color.color}`, 'h1', 'text-bold', 'word-break-keep', 'ml-18', 'position-relative');
+        show_condition.classList.add(`text-${bmi_condition_color.color}`, 'h1', 'text-bold', 'word-break-keep', 'position-relative');
         show_condition.id = 'posture';
         show_condition.textContent = bmi_condition_color.condition;
         console.log(get_current_innerHTML);
@@ -168,7 +168,7 @@ form_result_button.addEventListener('click', (e) => {
             height.value = null;
             let posture = document.querySelector('#posture');
             form.removeChild(posture); // Remove <p> element which id was "posture". 
-            form_result_button.classList.add('general-form-submit');
+            form_result_button.classList.add('general-form-submit', 'posture');
             form_result_button.classList.remove('general-form-reset', `border-${bmi_condition_color.color}`, `text-${bmi_condition_color.color}`, 'flex-shrink-0', 'position-relative');
             form_result_button.removeAttribute('disabled');
             form_result_button.innerHTML = get_current_innerHTML;

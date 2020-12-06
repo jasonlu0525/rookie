@@ -17,20 +17,24 @@
     max-width: 727px;
     @extend .m-0-a;
 }
- 
+
 .container-sm {
     max-width: 624px;
     @extend .m-0-a;
 
 }
- .container-sm,.container {
-@include phone-576{
-    padding:20px;
+
+.container-sm,
+.container {
+    @include phone-576 {
+        padding: 0 20px;
+    }
+
+    @include phone-425 {
+        padding: 0 10px;
+    }
 }
-@include phone-425{
-    padding:15px;
-}
- }
+
 .header {
     padding: 54px 0;
 }
@@ -60,6 +64,13 @@
         transform: rotate(135deg);
         transition: all 200ms;
 
+    }
+}
+
+.posture {
+    @include pad-768 {
+        margin-left: 0;
+        margin-bottom: 1rem;
     }
 }
 
