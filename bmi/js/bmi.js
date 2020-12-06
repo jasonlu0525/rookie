@@ -114,9 +114,8 @@ const create_el = (bmi_info) => {
 }
 
 const inital_list_inner = () => {
-
     let init = document.createElement('p');
-    init.innerHTML = `<hr>LocalStorage 目前尚無資料`;
+    init.innerHTML = `<hr>目前尚無資料`;
     init.classList.add('h2', 'text-center', 'text-bold');
     list.appendChild(init);
     return init;

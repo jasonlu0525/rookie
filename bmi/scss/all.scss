@@ -66,14 +66,12 @@
 
     }
 }
-
 .posture {
     @include pad-768 {
         margin-left: 0;
         margin-bottom: 1rem;
     }
 }
-
 .clear_all {
     padding: 20px;
 }
