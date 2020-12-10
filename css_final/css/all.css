@@ -198,7 +198,7 @@ a {
   display: inline-block;
 }
 
-.flex, .card, .card-item, .card-item .picture-basic, .banner, .navbar, .table, .table .tbody, .table .row {
+.flex, .card, .card-item, .card-item .picture-basic, .table, .table .tbody, .table .row, .navbar, .banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,7 +234,7 @@ a {
           justify-content: flex-end;
 }
 
-.align-items-center, .card-item .picture-basic, .card-item img, .banner, .navbar {
+.align-items-center, .card-item .picture-basic, .card-item img, .navbar, .banner {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -308,8 +308,8 @@ a {
 }
 
 .bg-linear-gradient-green {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#13503e), color-stop(#17654e), to(#218e6e));
-  background-image: linear-gradient(#13503e, #17654e, #218e6e);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#17654e), color-stop(#218e6e), to(#2bb78f));
+  background-image: linear-gradient(#17654e, #218e6e, #2bb78f);
 }
 
 .bg-white, .navbar {
@@ -505,11 +505,81 @@ a {
   }
 }
 
-.container {
-  max-width: 1368px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+.table {
+  margin: 40px 0 80px;
+}
+
+.table .tbody {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 81.48%;
+          flex: 0 0 81.48%;
+}
+
+@media screen and (max-width: 768px) {
+  .table .tbody {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.table .row {
+  padding: 12px 0 12px 28px;
+  border-style: solid;
+  border-color: #dddddd;
+  border-top-width: 2px;
+}
+
+.table .row:first-of-type {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.table .row:last-of-type {
+  border-bottom-width: 2px;
+}
+
+@media screen and (max-width: 425px) {
+  .table .row {
+    font-size: 14px;
+    padding-left: 14px;
+  }
+}
+
+.table .col {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+@media screen and (max-width: 425px) {
+  .navbar {
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.navbar-item {
+  padding: 20px;
+}
+
+.navbar-item:hover {
+  margin-bottom: -3px;
+  border-bottom: 3px solid #42d3a9;
+  border-bottom: 3px solid #42d3a9;
+}
+
+@media screen and (max-width: 425px) {
+  .navbar-item:hover {
+    padding-bottom: 17px;
+    margin-bottom: 0;
+  }
 }
 
 .logo {
@@ -587,38 +657,6 @@ a {
   margin: 0 13px;
 }
 
-@media screen and (max-width: 425px) {
-  .navbar {
-    position: fixed;
-    left: 0%;
-    bottom: 0%;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.navbar-item {
-  padding: 20px;
-}
-
-.navbar-item:hover {
-  margin-bottom: -3px;
-  border-bottom: 3px solid #42d3a9;
-  border-bottom: 3px solid #42d3a9;
-}
-
-@media screen and (max-width: 425px) {
-  .navbar-item:hover {
-    padding-bottom: 17px;
-    margin-bottom: 0;
-  }
-}
-
 .icon-word {
   margin-left: 8px;
   padding: 6px 0;
@@ -654,48 +692,10 @@ a {
   }
 }
 
-.table {
-  margin: 40px 0 80px;
-}
-
-.table .tbody {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 81.48%;
-          flex: 0 0 81.48%;
-}
-
-@media screen and (max-width: 768px) {
-  .table .tbody {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-}
-
-.table .row {
-  padding: 12px 0 12px 28px;
-  border-style: solid;
-  border-color: #dddddd;
-  border-top-width: 2px;
-}
-
-.table .row:first-of-type {
-  padding-top: 14px;
-  padding-bottom: 14px;
-}
-
-.table .row:last-of-type {
-  border-bottom-width: 2px;
-}
-
-@media screen and (max-width: 425px) {
-  .table .row {
-    font-size: 14px;
-    padding-left: 14px;
-  }
-}
-
-.table .col {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+.container {
+  max-width: 1368px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 /*# sourceMappingURL=all.css.map */
